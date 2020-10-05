@@ -24,10 +24,10 @@ pipeline {
     }
     post {
             unsuccessful{
-                emailext attachLog: true, body: 'teste', subject: 'Failed', to: 'gustavonigre@gmail.com'
+                emailext attachLog: true, body: 'teste', subject: 'Failed', to: 'gustavonigre@hotmail.com'
             }
             fixed{
-                emailext attachLog: true, body: 'teste', subject: 'fixed', to: 'gustavonigre@gmail.com'
+                emailext attachLog: true, body: 'teste', subject: 'fixed', to: 'gustavonigre@hotmail.com'
             }
         }
 }
