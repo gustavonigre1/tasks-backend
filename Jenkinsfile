@@ -21,6 +21,11 @@ pipeline {
                 } 
             }
         }
+        post {
+            unsuccessfull{
+                emailext attachLog: true, body: 'teste', subject: 'Failed', to: 'gustavonigre@gmail.com'
+            }
+        }
     }
 }
 
