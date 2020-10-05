@@ -20,13 +20,16 @@ pipeline {
                     deploy adapters: [tomcat8(credentialsId: 'TomcatLogin', path: '', url: 'http://localhost:8001/')], contextPath: 'tasks', war: 'target/tasks.war'
                 } 
             }
-        }
-        post {
+        }  
+    }
+    post {
             unsuccessfull{
                 emailext attachLog: true, body: 'teste', subject: 'Failed', to: 'gustavonigre@gmail.com'
             }
+            fixed{
+                emailext attachLog: true, body: 'teste', subject: 'fixed', to: 'gustavonigre@gmail.com'
+            }
         }
-    }
 }
 
 
