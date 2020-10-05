@@ -23,7 +23,7 @@ pipeline {
         }  
     }
     post {
-            unsuccessfull{
+            unsuccessful{
                 emailext attachLog: true, body: 'teste', subject: 'Failed', to: 'gustavonigre@gmail.com'
             }
             fixed{
